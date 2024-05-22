@@ -1,0 +1,86 @@
+.background {
+    background-color: var(--background, #181A1F);
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.background__top-ellipse {
+    width: 244px;
+    height: 112px;
+    position: absolute;
+    top: -56px;
+    left: calc(50% - 244px / 2);
+}
+
+.background__left-circle {
+    top: 20px;
+    left: 0;
+    position: absolute;
+
+}
+
+.background__left-ellipse {
+    top: 25px;
+    left: 0;
+    position: absolute;
+    fill: rgba(255, 255, 255, 0.10);
+    stroke-width: 1px;
+    stroke: #FFF;
+    backdrop-filter: blur(27px);
+    clip-path: url(#blur_left_ellipse);
+}
+
+#blur_left_ellipse {
+    top: 25px;
+    left: 0;
+    position: absolute;
+
+}
+
+.background__left-blur-ellipse {
+    top: 20%;
+    left: 0;
+    position: absolute;
+    filter: blur(69px);
+}
+
+.background__right-circle {
+    top: 166px;
+    right: 0;
+    position: absolute;
+
+}
+
+.background__right-ellipse {
+    top: 61px;
+    right: 0;
+    position: absolute;
+    fill: rgba(255, 255, 255, 0.10);
+    stroke-width: 1px;
+    stroke: #FFF;
+    backdrop-filter: blur(27px);
+    clip-path: url(#blur_right_ellipse);
+}
+
+#blur_right_ellipse {
+    top: 61px;
+    right: 0;
+    position: absolute;
+}
+
+.background__right-mask {
+    top: 61px;
+    right: 0;
+    position: absolute;
+}
+
+.background__right-blur-ellipse {
+    top: 40%;
+    right: 0;
+    position: absolute;
+    filter: blur(69px);
+}

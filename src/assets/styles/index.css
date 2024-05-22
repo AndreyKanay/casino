@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root {
+    --background: #181A1F;
+    --primary: linear-gradient(101deg, #9A6BFF 36.89%, #C8AEFF 82.1%);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    color: #FFFFFF;
+    font-family: "Unbounded", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    margin: 0;
+}
+
+a, input, select, textarea, button {
+    font-family: "Unbounded", sans-serif;
+}
+
+.main {
+
+}
