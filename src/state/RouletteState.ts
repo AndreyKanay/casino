@@ -1,7 +1,10 @@
 import {action, computed, makeAutoObservable} from "mobx";
+import {Participant} from "../interfaces/Participant";
 
 class RouletteState {
     _isBet: boolean = false;
+    _totalBet: number = 100;
+    _participants: Participant[] = [];
 
     constructor() {
         makeAutoObservable(this)
