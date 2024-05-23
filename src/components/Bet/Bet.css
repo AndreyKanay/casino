@@ -1,0 +1,93 @@
+.bet {
+    height: 102px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    border: 1px solid #9A6BFF;
+    background: var(--background, #181A1F);
+    padding: 16px;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bet__counter {
+    border-radius: 15px;
+    border: 1px solid #9A6BFF;
+    width: calc(100% - 6px);
+    height: 70px;
+    background: #1E1636;
+}
+
+.bet__action {
+    width: calc(100% - 6px);
+}
+
+.bet__counter-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 6px;
+    padding: 5px 12px 0 12px;
+}
+
+.bet__counter-sep {
+    height: 1px;
+    background: var(--primary);
+    width: 100%;
+    margin: 4px 0;
+}
+
+.bet__counter-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 6px;
+    padding: 0 12px 6px 12px;
+}
+
+.bet__btn {
+    border-radius: 10px;
+    background: #9A6BFF;
+    display: flex;
+    padding: 7px 6px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #FFF;
+    min-width: 32px;
+    font-size: 8px;
+    font-weight: 400;
+    text-transform: uppercase;
+    height: 24px;
+}
+
+.bet__btn_font-size_big {
+    font-size: 16px;
+}
+
+
+.bet__count {
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), linear-gradient(101deg, #9A6BFF 36.89%, #C8AEFF 82.1%), #D9D9D9;
+}
+
+.bet__count-text {
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.bet__currency {
+    color: #FFF;
+    font-size: 8px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 4px;
+}
