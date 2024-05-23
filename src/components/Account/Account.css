@@ -1,0 +1,26 @@
+.account {
+    background: var(--primary, #9A6BFF);
+    padding: 1px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.account__inner {
+    background: var(--background, #181A1F);
+    padding: 9px 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 15px;
+}
+
+.account__balance {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.account__currency {
+    font-size: 8px;
+}

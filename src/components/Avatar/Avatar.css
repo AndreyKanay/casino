@@ -1,0 +1,30 @@
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--primary, #9A6BFF);
+
+
+}
+
+.avatar_size_sm {
+    width: 30px;
+    height: 30px;
+}
+
+.avatar_size_md {
+    width: 44px;
+    height: 44px;
+}
+
+.avatar_size_lg {
+    width: 60px;
+    height: 60px;
+}
+
+.avatar__image {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 50%;
+}
