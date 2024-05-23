@@ -1,0 +1,25 @@
+.modal-window {
+    top: 20px;
+    left: 15px;
+    right: 15px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 37px;
+    background-color: #181A1F;
+    border-radius: 15px;
+}
+
+.modal-window-name {
+    position: absolute;
+    top: 0; /* размещаем элемент в верхнем краю */
+    left: 0; /* размещаем элемент в правом краю */
+    padding: 18px 32px;
+    background-color: brown;
+    border-radius: 15px 0 20px 0;
+}
+
+.modal-window-name-text {
+    margin: 0;
+}
