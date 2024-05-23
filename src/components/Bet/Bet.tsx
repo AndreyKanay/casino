@@ -27,7 +27,7 @@ const Bet = () => {
             </div>
             <div className="bet__action">
                 <Button text="Ставка" onClick={() => {
-                }} size={BUTTON_SIZE.LG}/>
+                }} size={BUTTON_SIZE.LG} fullwidth />
             </div>
         </div>
     )
