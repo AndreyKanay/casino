@@ -1,10 +1,13 @@
 import "./Header.css";
 import IconButton from "../Buttons/IconButton";
+import Account from "../Account/Account";
 
 const Header = () => {
     return (
         <div className="header">
-            <div className="header__left"></div>
+            <div className="header__left">
+                <Account />
+            </div>
             <div className="header__right">
                 <IconButton onClick={() => {}}>
                     ?
