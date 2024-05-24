@@ -3,16 +3,19 @@ import Background from "../components/Background/Background";
 import Header from "../components/Header/Header";
 import ModalWindow from "../components/Modal/ModalWindow";
 import "./HomePage.css"
+import Menu from "../components/Menu/Menu";
 
 
 const HomePage:FC = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpenFAQ, setIsOpenFAQ] = useState(false);
+    const [isOpenMenu, setIsOpenMenu] = useState(false);
 
     return (
         <div className="main">
-            <ModalWindow isOpen={isOpen} setIsOpen={setIsOpen}/>
-            <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
+            <ModalWindow isOpenFAQ={isOpenFAQ} setIsOpenFAQ={setIsOpenFAQ}/>
+            <Menu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
+            <Header isOpenFAQ={isOpenFAQ} setIsOpenFAQ={setIsOpenFAQ} isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu}/>
             <Background />
         </div>
     )

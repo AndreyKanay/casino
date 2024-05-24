@@ -5,36 +5,29 @@ import IconButton from "../Buttons/IconButton"
 import "./Menu.css"
 
 interface MenuProps {
-    isOpen: boolean;
-    setIsOpen: any;
+    isOpenMenu: boolean;
+    setIsOpenMenu: any;
   }
 
-const Menu: React.FC<MenuProps> = ({ isOpen, setIsOpen }) => {
+const Menu: React.FC<MenuProps> = ({ isOpenMenu, setIsOpenMenu }) => {
 
   return (
     <div>
-        {isOpen && (
+        {isOpenMenu && (
           <div className='menu-window'>
-              <div>
-                  <div className="modal-window-name">
-                    <p className="modal-window-name-text">FAQ</p>
-                  </div>
-                  <div className="modal-window-btn">
-                    <IconButton onClick={() => setIsOpen(!isOpen)}>
-                      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="menu-window-btn">
+                <IconButton onClick={() => setIsOpenMenu(!isOpenMenu)}>
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 8L20 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         <path d="M20 8L8 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                      </svg>
-                    </IconButton>
-                  </div>
-                  <div className="modal-window-btn-play">
-                    <ButtonPlay onClick={() => setIsOpen(!isOpen)}>
-                      ?
-                    </ButtonPlay>
-                  </div>
-                  <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-                  </div>
-              </div>
+                    </svg>
+                </IconButton>
+            </div>
+            <div className="menu-window-list">
+                <p className="menu-window-list-one menu-window-list-color">HISTORY</p>
+                <p className="menu-window-list-one">REFFERAL</p>
+                <p className="menu-window-list-one menu-window-list-color">TOP USERS</p>
+            </div>
           </div>
         )}
     </div>

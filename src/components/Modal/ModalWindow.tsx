@@ -5,21 +5,21 @@ import IconButton from "../Buttons/IconButton"
 import "./ModalWindow.css"
 
 interface ModalProps {
-    isOpen: boolean;
-    setIsOpen: any;
+    isOpenFAQ: boolean;
+    setIsOpenFAQ: any;
   }
 
-const ModalWindow: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
+const ModalWindow: React.FC<ModalProps> = ({ isOpenFAQ, setIsOpenFAQ }) => {
 
   return (
     <div>
-        {isOpen && (
+        {isOpenFAQ && (
           <div className='modal-window'>
                   <div className="modal-window-name">
                     <p className="modal-window-name-text">FAQ</p>
                   </div>
                   <div className="modal-window-btn">
-                    <IconButton onClick={() => setIsOpen(!isOpen)}>
+                    <IconButton onClick={() => setIsOpenFAQ(!isOpenFAQ)}>
                       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 8L20 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
                         <path d="M20 8L8 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -27,7 +27,7 @@ const ModalWindow: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
                     </IconButton>
                   </div>
                   <div className="modal-window-btn-play">
-                    <ButtonPlay onClick={() => setIsOpen(!isOpen)}>
+                    <ButtonPlay onClick={() => setIsOpenFAQ(!isOpenFAQ)}>
                       ?
                     </ButtonPlay>
                   </div>
