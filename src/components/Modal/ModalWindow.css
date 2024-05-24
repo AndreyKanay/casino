@@ -1,5 +1,5 @@
 .modal-window {
-    top: 20px;
+    top: 14px;
     left: 15px;
     right: 15px;
     position: absolute;
@@ -7,19 +7,43 @@
     display: flex;
     justify-content: space-between;
     padding: 20px 37px;
-    background-color: #181A1F;
+    background-color: hsl(223, 13%, 11%);
     border-radius: 15px;
+    height: 703px;
+    width: 360px;
+    border: 1px solid #9A6BFF; 
 }
 
 .modal-window-name {
     position: absolute;
-    top: 0; /* размещаем элемент в верхнем краю */
-    left: 0; /* размещаем элемент в правом краю */
+    top: 0; 
+    left: 0; 
     padding: 18px 32px;
-    background-color: brown;
-    border-radius: 15px 0 20px 0;
+    background: var(--primary, #9A6BFF);
+    color: #FFFFFF;
+    border-radius: 10px 0 10px 0;
+    max-height: 66px;
 }
 
 .modal-window-name-text {
+    font-size: 24px;
+    font-weight: 600;
     margin: 0;
+}
+
+.modal-window-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px 24px;
+    border-radius: 15px 0 20px 0;
+}
+
+.modal-window-btn-play {
+    position: absolute;
+    bottom: 20px;
+    justify-content: end;
+    left: 0px;
+    left: 50%;
+    transform: translateX(-50%);
 }
