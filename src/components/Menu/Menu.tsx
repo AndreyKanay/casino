@@ -3,6 +3,7 @@ import Button from "../Buttons/Button";
 import ButtonPlay from "../Buttons/ButtonPlay";
 import IconButton from "../Buttons/IconButton"
 import "./Menu.css"
+import Referral from "../Referral/Referral";
 
 interface MenuProps {
     isOpenMenu: boolean;
@@ -10,6 +11,8 @@ interface MenuProps {
   }
 
 const Menu: React.FC<MenuProps> = ({ isOpenMenu, setIsOpenMenu }) => {
+
+  const [isOpenReferral, setIsOpenReferral] = useState(false)
 
   return (
     <div>
@@ -25,11 +28,13 @@ const Menu: React.FC<MenuProps> = ({ isOpenMenu, setIsOpenMenu }) => {
             </div>
             <div className="menu-window-list">
                 <p className="menu-window-list-one menu-window-list-color">HISTORY</p>
-                <p className="menu-window-list-one">REFFERAL</p>
+                <p onClick={() => {setIsOpenMenu(!isOpenMenu); setIsOpenReferral(!isOpenReferral)}} 
+                className="menu-window-list-one">REFFERAL</p>
                 <p className="menu-window-list-one menu-window-list-color">TOP USERS</p>
             </div>
           </div>
         )}
+        <Referral isOpenReferral={isOpenReferral} setIsOpenReferral={setIsOpenReferral}/>
     </div>
   )
 }

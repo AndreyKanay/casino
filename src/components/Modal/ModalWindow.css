@@ -1,11 +1,11 @@
 .modal-window {
     top: 14px;
-    left: 15px;
-    right: 15px;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
     z-index: 1;
     display: flex;
-    justify-content: space-between;
     padding: 20px 37px;
     background-color: hsl(223, 13%, 11%);
     border-radius: 15px;

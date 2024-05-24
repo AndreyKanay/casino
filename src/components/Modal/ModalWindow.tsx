@@ -3,6 +3,7 @@ import Button from "../Buttons/Button";
 import ButtonPlay from "../Buttons/ButtonPlay";
 import IconButton from "../Buttons/IconButton"
 import "./ModalWindow.css"
+import FAQ from "../FAQ/FAQ";
 
 interface ModalProps {
     isOpenFAQ: boolean;
@@ -18,6 +19,11 @@ const ModalWindow: React.FC<ModalProps> = ({ isOpenFAQ, setIsOpenFAQ }) => {
                   <div className="modal-window-name">
                     <p className="modal-window-name-text">FAQ</p>
                   </div>
+                  {isOpenFAQ && (
+                    <div className="modal-window-text">
+                      <FAQ />
+                    </div>
+                  )}
                   <div className="modal-window-btn">
                     <IconButton onClick={() => setIsOpenFAQ(!isOpenFAQ)}>
                       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
