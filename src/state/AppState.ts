@@ -5,6 +5,7 @@ class AppState {
     private _isShowReferralsModal: boolean = false;
     private _isShowHistoryModal: boolean = false;
     private _isShowTopUsersModal: boolean = false;
+    private _isShowMenu: boolean = false;
 
     constructor() {
         makeAutoObservable(this)
@@ -30,6 +31,11 @@ class AppState {
         return this._isShowTopUsersModal;
     }
 
+    @action.bound
+    get isShowMenu(): boolean {
+        return this._isShowMenu;
+    }
+
     @computed
     setIsShowFAQModal(value: boolean) {
         this._isShowFAQModal = value;
@@ -48,6 +54,11 @@ class AppState {
     @computed
     setIsShowTopUsersModal(value: boolean) {
         this._isShowTopUsersModal = value;
+    }
+
+    @computed
+    setIsShowMenu(value: boolean) {
+        this._isShowMenu = value;
     }
 }
 
