@@ -4,6 +4,7 @@ import router from "./router";
 import Menu from "./components/Menu/Menu";
 import FAQModal from "./modals/FAQModal";
 import ReferralsModal from "./modals/ReferralsModal";
+import HistoryModal from "./modals/HistoryModal";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Menu />
             <FAQModal />
             <ReferralsModal />
+            <HistoryModal />
         </>
     );
 }
