@@ -1,0 +1,14 @@
+.radio-button {
+    border-radius: 10px;
+    background: var(--primary_clear_color);
+    padding: 7px 6px;
+}
+
+.radio-button_is_active {
+    background: var(--primary_clear_color_action);
+}
+
+.radio-button__label {
+    font-size: 8px;
+    font-weight: 400;
+}
