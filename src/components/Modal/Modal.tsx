@@ -12,7 +12,9 @@ interface ModalProps extends PropsWithChildren {
 }
 
 const Modal: FC<ModalProps> = ({title, isShow, closeButtonText, onClose, children}) => {
-    if (!isShow) return (<></>);
+    const onCloseHandler = () => {
+        onClose();
+    }
 
     return (
         <div className={`modal ${isShow ? 'modal_is_show' : ''}`}>
@@ -22,7 +24,7 @@ const Modal: FC<ModalProps> = ({title, isShow, closeButtonText, onClose, childre
                         <p className="modal__title">{title}</p>
                     </div>
                     <div className="modal__header-action">
-                        <IconButton onClick={onClose}>
+                        <IconButton onClick={onCloseHandler}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
                                  fill="none">
                                 <path d="M1 1L19.3848 19.3848" stroke="white" strokeWidth="2" strokeLinecap="round"/>
@@ -36,7 +38,7 @@ const Modal: FC<ModalProps> = ({title, isShow, closeButtonText, onClose, childre
                     {children}
                 </div>
                 <div className="modal__action">
-                    <Button text={closeButtonText} onClick={onClose}/>
+                    <Button text={closeButtonText} onClick={onCloseHandler}/>
                 </div>
             </div>
         </div>
