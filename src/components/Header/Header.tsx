@@ -2,12 +2,15 @@ import "./Header.css";
 import IconButton from "../Buttons/IconButton";
 import Account from "../Account/Account";
 import AppState from "../../state/AppState";
-import {observer} from "mobx-react-lite";
 
 const Header = () => {
 
     const onOpenFAQModalHandler = () => {
         AppState.setIsShowFAQModal(true)
+    }
+
+    const onOpenMenuHandler = () => {
+        AppState.setIsShowMenu(true)
     }
 
     return (
@@ -19,14 +22,12 @@ const Header = () => {
                 <IconButton onClick={onOpenFAQModalHandler}>
                     ?
                 </IconButton>
-                <IconButton onClick={() => {
-                }}>
+                <IconButton onClick={onOpenMenuHandler}>
                     <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1H27" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                         <path d="M1 9H27" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                         <path d="M1 17H27" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
-
                 </IconButton>
             </div>
         </div>

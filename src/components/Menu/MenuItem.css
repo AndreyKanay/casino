@@ -1,0 +1,23 @@
+.menu__item {
+    background-color: transparent;
+    padding: 8px 23px;
+    color: #FFF;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+}
+
+.menu__item:nth-child(odd) {
+    background-color: var(--background_2);
+}
+
+.menu__item:nth-child(even) {
+    background-color: var(--background);
+}
+
+.menu__item:last-child {
+    border-radius: 15px;
+}
