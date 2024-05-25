@@ -1,0 +1,23 @@
+.box {
+    border-radius: 15px;
+    margin: 0 0 8px 0;
+    background: var(--primary);
+    min-height: 70px;
+    padding: 1px;
+}
+
+.box_color_primary {
+    --box_background: transparent;
+}
+
+.box_color_default {
+    --box_background: var(--background);
+}
+
+.box__inner {
+    background: var(--box_background);
+    padding: 12px 16px 12px 24px;
+    border-radius: 15px;
+    height: 100%;
+    min-height: 69px;
+}

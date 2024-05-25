@@ -1,0 +1,60 @@
+.referral {}
+
+.referral__section {}
+
+.referral__title {
+    margin: 20px 0 14px 0 !important;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.referral__text {
+    font-family: "Roboto", sans-serif;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 8px !important;
+}
+
+.referral__percentage {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.referral__description {
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.referral__data-filter {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.referral__label {
+    color: var(--main_text_color);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 8px !important;
+}
+
+.referral__profit {
+    margin-bottom: 16px;
+}
+
+.referral__friends,
+.referral__profit {
+    color: var(--primary_clear_color);
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
