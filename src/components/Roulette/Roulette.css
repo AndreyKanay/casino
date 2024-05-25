@@ -1,0 +1,19 @@
+.roulette {}
+
+.roulette__text {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 42px;
+    margin-bottom: 8px;
+}
+
+.roulette__spinner {
+    margin-bottom: 40px;
+}
+
+.roulette__bet {
+    margin-bottom: 20px;
+}
