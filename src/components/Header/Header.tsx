@@ -1,15 +1,22 @@
 import "./Header.css";
 import IconButton from "../Buttons/IconButton";
 import Account from "../Account/Account";
+import AppState from "../../state/AppState";
+import {observer} from "mobx-react-lite";
 
 const Header = () => {
+
+    const onOpenFAQModalHandler = () => {
+        AppState.setIsShowFAQModal(true)
+    }
+
     return (
         <div className="header">
             <div className="header__left">
                 <Account />
             </div>
             <div className="header__right">
-                <IconButton onClick={() => {}}>
+                <IconButton onClick={onOpenFAQModalHandler}>
                     ?
                 </IconButton>
                 <IconButton onClick={() => {
