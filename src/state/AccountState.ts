@@ -8,6 +8,43 @@ class AccountState {
         {key: "week", profit: 3.43, friends: 3},
         {key: "month", profit: 5.43, friends: 5},
     ]
+    private _history = [
+        {
+            result: "loss",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }, {
+            result: "win",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }, {
+            result: "loss",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }, {
+            result: "win",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }, {
+            result: "win",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }, {
+            result: "loss",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }, {
+            result: "win",
+            bet: 1,
+            totalBet: 4,
+            coefficient: 25
+        }]
 
     constructor() {
         makeAutoObservable(this)
@@ -26,6 +63,11 @@ class AccountState {
     @action.bound
     getReferral(key: string) {
         return this._referrals.filter(item => item.key === key)[0]
+    }
+
+    @action.bound
+    get history() {
+        return this._history;
     }
 
     @computed
