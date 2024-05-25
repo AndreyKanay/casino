@@ -1,0 +1,59 @@
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 32px;
+}
+
+.spinner__circle {
+    max-width: 280px;
+    width: 100%;
+}
+
+.spinner__total-bet {
+    position: absolute;
+    height: 195px;
+    width: 195px;
+    background: url("../../assets/images/start.svg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.spinner__total-bet-amount {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.spinner__total-bet-currency {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.spinner__circle_is_spin {
+    animation: spin .7s linear infinite;
+}
+
+.spinner__cursor {
+    position: absolute;
+    width: 24px;
+    height: 38px;
+    top: 0px;
+    z-index: 9;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
