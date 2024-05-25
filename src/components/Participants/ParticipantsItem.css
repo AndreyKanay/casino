@@ -1,74 +1,61 @@
 .participant {
     text-align: center;
     height: 120px;
-    --bg-border: rgba(255, 255, 255, 0.3);
-
 }
 
 .participant:nth-child(11n + 1) {
-    --inner_bg: var(--primary);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0 0 34px 0 rgba(122, 27, 243, 0.25) inset;
+    --inner_bg: var(--participant_background_1);
+    --shadow_bg: var(--participant_shadow_1);
 }
 
 .participant:nth-child(11n + 2) {
-    --inner_bg: var(--red, linear-gradient(101deg, #EF0358 36.89%, #FF6480 82.1%), linear-gradient(101deg, #1FF31B 36.89%, #A8FF64 82.1%), #FFF);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(239, 3, 88, 0.25) inset;
+    --inner_bg: var(--participant_background_2);
+    --shadow_bg: var(--participant_shadow_2);
 }
 
 .participant:nth-child(11n + 3) {
-    --inner_bg: var(--orange, linear-gradient(101deg, #EF7403 36.89%, #FFDA64 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(243, 131, 27, 0.25) inset;
+    --inner_bg: var(--participant_background_3);
+    --shadow_bg: var(--participant_shadow_3);
 }
 
 .participant:nth-child(11n + 4) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #EAEF03 36.89%, #FCFF64 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(234, 239, 3, 0.25) inset;
+    --inner_bg: var(--participant_background_4);
+    --shadow_bg: var(--participant_shadow_4);
 }
 
 .participant:nth-child(11n + 5) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #0337EF 36.89%, #646AFF 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(3, 55, 239, 0.25) inset;
+    --inner_bg: var(--participant_background_5);
+    --shadow_bg: var(--participant_shadow_5);
 }
 
 .participant:nth-child(11n + 6) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #03C4EF 36.89%, #03C4EF 36.89%, #64FFFF 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(3, 196, 239, 0.25) inset;
+    --inner_bg: var(--participant_background_6);
+    --shadow_bg: var(--participant_shadow_6);
 }
 
 .participant:nth-child(11n + 7) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #EA03EF 36.89%, #F364FF 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(234, 3, 239, 0.25) inset;
+    --inner_bg: var(--participant_background_7);
+    --shadow_bg: var(--participant_shadow_7);
 }
 
 .participant:nth-child(11n + 8) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #1FF31B 36.89%, #A8FF64 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(31, 243, 27, 0.25) inset;
+    --inner_bg: var(--participant_background_8);
+    --shadow_bg: var(--participant_shadow_8);
 }
 
 .participant:nth-child(11n + 9) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #EF0303 36.89%, #FF6464 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(239, 3, 3, 0.25) inset;
+    --inner_bg: var(--participant_background_9);
+    --shadow_bg: var(--participant_shadow_9);
 }
 
 .participant:nth-child(11n + 10) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #6B03EF 36.89%, #8364FF 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(107, 3, 239, 0.25) inset;
+    --inner_bg: var(--participant_background_10);
+    --shadow_bg: var(--participant_shadow_10);
 }
 
 .participant:nth-child(11n + 11) {
-    --inner_bg: var(--yellow, linear-gradient(101deg, #03EF8C 36.89%, #64FF86 82.1%), #D9D9D9);
-    --bg: rgba(102, 102, 102, 0.10);
-    --bg-shadow: 0px 0px 34px 0px rgba(3, 239, 140, 0.25) inset;
+    --inner_bg: var(--participant_background_11);
+    --shadow_bg: var(--participant_shadow_11);
 }
 
 
@@ -90,9 +77,9 @@
     position: absolute;
     top: -20px;
     width: 100%;
-    border: 1px solid var(--bg-border);
-    background: var(--bg);
-    box-shadow: var(--bg-shadow);
+    border: 1px solid var(--participant_border);
+    background: var(--participant_background);
+    box-shadow: var(--shadow_bg);
     border-radius: 15px;
     gap: 8px;
 }
@@ -101,19 +88,23 @@
     margin-top: -8px;
 }
 
+.participant__avatar .avatar {
+    background: var(--inner_bg);
+}
+
 .participant__percentage,
 .participant__bet {
     margin: 0;
 }
 
 .participant__percentage {
-    color: #FFF;
+    color: var(--main_text_color);
     font-size: 16px;
     font-weight: 400;
 }
 
 .participant__bet {
-    color: #FFF;
+    color: var(--main_text_color);
     font-size: 12px;
     font-weight: 400;
     padding: 2px 0;
