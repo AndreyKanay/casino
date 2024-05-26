@@ -67,7 +67,7 @@ const SVGArc:FC<SVGArcProps> = ({color, startAngle, endAngle, radius, cutoutRadi
 
     const path = getArcPath(radius, cutoutRadius, startAngle, endAngle)
 
-    return <path fillRule="evenodd" fill={color} d={path} />
+    return <path fill={color} d={path} />
 }
 
 export default SVGArc;

@@ -4,17 +4,23 @@ import {AVATAR_SIZE} from "../../constants/avatar_constants";
 
 import './ParticipantsItem.css'
 
-const ParticipantsItem:FC = () => {
+interface ParticipantsItemProps {
+    avatar: string;
+    bet: number;
+    percentage: number;
+}
+
+const ParticipantsItem:FC<ParticipantsItemProps> = ({avatar, bet, percentage}) => {
     return (
         <div className="participant">
             <div className="participant__inner">
                 <div className="participant__background">
                     <div className="participant__avatar">
-                        <Avatar image={require('../../assets/images/avatar.png')} size={AVATAR_SIZE.MD}/>
+                        <Avatar image={avatar} size={AVATAR_SIZE.MD}/>
                     </div>
-                    <p className="participant__percentage">25%</p>
+                    <p className="participant__percentage">{percentage.toFixed(2)}%</p>
                 </div>
-                <p className="participant__bet">1 <span className="participant__currency">ton</span></p>
+                <p className="participant__bet">{bet.toFixed(2)} <span className="participant__currency">ton</span></p>
             </div>
         </div>
     )
