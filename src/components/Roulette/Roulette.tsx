@@ -13,17 +13,7 @@ const Roulette = () => {
                 6,34 sec
             </div>
             <div className="roulette__spiner">
-                <Spinner items={[
-                    {bet: 10, color: "#9A6BFF"},
-                    {bet: 20, color: "#EF0358"},
-                    {bet: 30, color: "#EF7403"},
-                    {bet: 5, color: "#EAEF03"},
-                    {bet: 10, color: "#0337EF"},
-                    {bet: 15, color: "#03C4EF"},
-                    {bet: 10, color: "#EA03EF"},
-                    {bet: 10, color: "#3332AA"},
-                    {bet: 1, color: "#c2ff32"},
-                ]} />
+                <Spinner items={RouletteState.participantsForSpinner} totalBet={RouletteState.totalBet}/>
             </div>
             {RouletteState.isBet ?
                 null :
@@ -32,7 +22,7 @@ const Roulette = () => {
                 </div>
             }
             <div className="roulette__participants">
-                <Participants />
+                <Participants item={RouletteState.participantsForList} />
             </div>
         </div>
     )

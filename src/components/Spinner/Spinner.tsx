@@ -6,6 +6,7 @@ import {getRandomColor} from "../../helpers/getRandomHexColor";
 
 import "./Spinner.css"
 import SpinnerCursor from "./SpinnerCursor";
+import {getRandomGradient} from "../../helpers/getGradient";
 
 const cutoutRadiusShare = 0.6;
 const totalDegrees = 360;
@@ -42,17 +43,18 @@ const getItemsWithAngles = (items: PieChartItem[]): PieChartItemWithAngle[] => {
 
 
 interface SpinnerProps {
-    items: PieChartItem[]
+    items: PieChartItem[],
+    totalBet: number
 }
 
-const Spinner: FC<SpinnerProps> = ({items}) => {
+const Spinner: FC<SpinnerProps> = ({items, totalBet}) => {
     const itemsWithAngles = useMemo(() => {
         const result = getItemsWithAngles(items.filter((item) => item.bet > 0))
 
         if (!result.length) {
             result.push({
                 bet: 1,
-                color: getRandomColor(),
+                color: getRandomGradient(),
                 startAngle: 0,
                 endAngle: totalDegrees,
             })
@@ -69,9 +71,133 @@ const Spinner: FC<SpinnerProps> = ({items}) => {
     return (
         <div className="spinner">
             <div className="spinner__cursor">
-                <SpinnerCursor />
+                <SpinnerCursor/>
             </div>
             <svg viewBox="0 0 200 200" className="spinner__circle">
+                <defs>
+                    <linearGradient
+                        id="gradient_0"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#9A6BFF"/>
+                        <stop offset="1" stopColor="#C8AEFF"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_1"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#EF0358"/>
+                        <stop offset="1" stopColor="#FF6480"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_2"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#EF7403"/>
+                        <stop offset="1" stopColor="#FFDA64"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_3"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#EAEF03"/>
+                        <stop offset="1" stopColor="#D7FF64"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_4"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#0337EF"/>
+                        <stop offset="1" stopColor="#646AFF"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_5"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#03C4EF"/>
+                        <stop offset="0.0001" stopColor="#03C4EF"/>
+                        <stop offset="1" stopColor="#64FFFF"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_6"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#EA03EF"/>
+                        <stop offset="1" stopColor="#F364FF"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_7"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#1FF31B"/>
+                        <stop offset="1" stopColor="#A8FF64"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_8"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#EF0303"/>
+                        <stop offset="1" stopColor="#FF6464"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_9"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#6B03EF"/>
+                        <stop offset="1" stopColor="#8364FF"/>
+                    </linearGradient>
+                    <linearGradient
+                        id="gradient_10"
+                        x1="128.455"
+                        y1="6"
+                        x2="175.263"
+                        y2="15.0492"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="#03EF8C"/>
+                        <stop offset="1" stopColor="#64FF86"/>
+                    </linearGradient>
+                </defs>
                 {itemsWithAngles.map(
                     (
                         {color, startAngle, endAngle, bet},
@@ -106,7 +232,7 @@ const Spinner: FC<SpinnerProps> = ({items}) => {
             </svg>
             <div className="spinner__total-bet">
                 <p className="spinner__total-bet-amount">
-                    22,00
+                    {totalBet}
                 </p>
                 <p className="spinner__total-bet-currency">ton</p>
             </div>
